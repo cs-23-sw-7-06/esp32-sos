@@ -1,0 +1,17 @@
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Espressif IoT Development Framework (ESP-IDF)
+        uses: espressif/esp-idf-ci-action@v1.1.0
